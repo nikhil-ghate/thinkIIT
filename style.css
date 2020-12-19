@@ -1,0 +1,208 @@
+/* -------------------------------------------------------------------------------- */
+/* BASIC SETUP */
+/* -------------------------------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+:root {
+  --main-color: #027581;
+  --text-dark: #1d2231;
+  --text-gray: #8390a2;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Varela Round", sans-serif;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* SIDE BAR */
+/* -------------------------------------------------------------------------------- */
+.sidebar-header h2 {
+  color: #4da0ff;
+}
+.sidebar-header h2 span {
+  color: orangered;
+}
+.sidebar {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: rgb(28, 199, 179);
+  background: linear-gradient(
+    0deg,
+    rgba(28, 199, 179, 1) 0%,
+    rgba(24, 137, 209, 1) 51%
+  );
+  color: #fff;
+  overflow-y: auto;
+  transition: width 500ms;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  padding: 0 1rem;
+  background: #3e3838;
+}
+.sidebar-header img,
+.user-info img {
+  width: 3rem;
+  margin: 10px;
+}
+
+.sidebar-menu {
+  padding: 1rem;
+}
+
+.sidebar li {
+  margin-top: 1.2rem;
+  text-transform: uppercase;
+}
+
+#sidebar-toggle {
+  display: none;
+}
+
+.sidebar a {
+  color: #fff;
+  font-size: 0.9rem;
+  display: flex;
+  padding-bottom: 0.9rem;
+}
+.sidebar a h3 {
+  padding-left: 0.9rem;
+  font-weight: 100;
+}
+span {
+  font-size: 1.3rem;
+}
+.sidebar a span:last-child {
+  padding-left: 0.5rem;
+}
+#sidebar-toggle:checked ~ .sidebar {
+  width: 80px;
+}
+#sidebar-toggle:checked ~ .sidebar .sidebar-header h2,
+#sidebar-toggle:checked ~ .sidebar li h3 {
+  display: none;
+}
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header,
+#sidebar-toggle:checked ~ .sidebar li {
+  display: flex;
+  justify-content: center;
+}
+
+#sidebar-toggle:checked ~ .main-content {
+  margin-left: 180px;
+}
+
+#sidebar-toggle:checked ~ .main-content header {
+  left: 80px;
+  width: calc(100% - 80px);
+}
+.slide {
+  display: flex;
+  justify-content: flex-end;
+}
+.main-content {
+  position: relative;
+  min-height: 100vh;
+  margin-left: 240px;
+  transition: margin-left 500ms;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 240px;
+  z-index: 100;
+  width: calc(100% - 240px);
+  background: #fff;
+  height: 90px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  transition: left 500ms, width 500ms;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info h1 {
+  font-weight: 200;
+}
+.social-icons span {
+  margin-left: 1.2rem;
+}
+main {
+  margin-top: 90px;
+  min-height: calc(100vh - 90px);
+  padding: 1rem;
+}
+
+.grid {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+}
+
+.grid article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid article img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+}
+
+.hero-title {
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+
+.hero-title h3 {
+  color: #fff;
+}
+#card1 .hero-title {
+  background: linear-gradient(to left, transparent, #0768d8),
+    url("img/comp2.jpg");
+  background-position: center;
+  background-size: 300px 120px;
+}
+
+#card2 .hero-title {
+  background: linear-gradient(to left, transparent, rgb(134, 11, 216)),
+    url("img/comp1.jpg");
+  background-size: 300px 120px;
+}
+
+#card3 .hero-title {
+  background: linear-gradient(to left, transparent, rgb(219, 36, 15)),
+    url("img/comp3.jpg");
+  background-size: 300px 120px;
+}
+
+#card4 .hero-title {
+  background: linear-gradient(to left, transparent, rgb(13, 241, 146)),
+    url("img/laptop-with-student.jpg");
+  background-size: 300px 120px;
+}
