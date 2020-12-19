@@ -105,7 +105,7 @@ span {
 }
 
 #sidebar-toggle:checked ~ .main-content {
-  margin-left: 180px;
+  margin-left: 100px;
 }
 
 #sidebar-toggle:checked ~ .main-content header {
@@ -193,23 +193,23 @@ main {
   background: linear-gradient(to left, transparent, #0768d8),
     url("img/comp2.jpg");
   background-position: center;
-  background-size: 300px 120px;
+  background-size: cover;
 }
 
 #card2 .hero-title {
   background: linear-gradient(to left, transparent, rgb(134, 11, 216)),
     url("img/comp1.jpg");
-  background-size: 300px 120px;
+  background-size: cover;
 }
 
 #card3 .hero-title {
   background: linear-gradient(to left, transparent, rgb(219, 36, 15)),
     url("img/comp3.jpg");
-  background-size: 300px 120px;
+  background-size: cover;
 }
 
 #card4 .hero-title {
   background: linear-gradient(to left, transparent, rgb(13, 241, 146)),
     url("img/laptop-with-student.jpg");
-  background-size: 300px 120px;
+  background-size: cover;
 }
